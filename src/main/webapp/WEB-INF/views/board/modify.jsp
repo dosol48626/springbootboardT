@@ -10,7 +10,7 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Board Modify Page</h5>
-      <form>
+      <form method="get" action="/board/modify">
       <div class="input-group mb-3">
         <label class="input-grout-text">Bno</label>
         <input class="form-control" type="text" name="bno" value="${boardDTO.bno}" readonly>
@@ -30,13 +30,13 @@
 
       <div class="my-4">
         <div class="float-end">
-          <button type="button" class="btn btn-primary">Modify</button>
+          <button type="submit" class="btn btn-primary">Modify</button>
           <button type="button" class="btn btn-secondary">List</button>
         </div>
       </div>
       </form>
     </div>
-<%--    <script>--%>
+    <script>
 <%--      const formObj = document.querySelector("form") //변수할당--%>
 
 <%--      document.querySelector(".btn-primary").addEventListener("click", function (e) {--%>
@@ -47,13 +47,14 @@
 <%--        formObj.submit();--%>
 <%--      }, false);--%>
 
-<%--      document.querySelector(".btn-secondary").addEventListener("click", function (e) {--%>
-<%--        e.preventDefault();--%>
-<%--        e.stopPropagation();--%>
-<%--        self.location = `/todo/list?${pageRequestDTO.link}`;--%>
-<%--        //self.location = "/todo/list";--%>
-<%--      }, false)--%>
-<%--    </script>--%>
+
+
+      document.querySelector(".btn-secondary").addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        self.location = "/board/list";
+      }, false)
+    </script>
   </div>
 </div>
 

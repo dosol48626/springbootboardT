@@ -30,6 +30,7 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public BoardDTO getOne(int bno) {
+        boardMapper.visitCountUpdate(bno);
         BoardDTO boardDTO = boardMapper.selectOne(bno);
         return boardDTO;
     }

@@ -13,4 +13,5 @@ public interface BoardMapper {
     BoardDTO selectOne(int bno);
     void update(BoardDTO boardDTO);
     void delete(int bno);
+    void visitCountUpdate(int bno);
 }
